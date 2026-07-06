@@ -40,10 +40,15 @@ export const studioStats = [
   { label: "Caffeinated beveragess / day", value: "∞" },
 ];
 
+// Build a URL for a file in /public that stays correct under the deploy's base
+// path (`/lsg-website/` on GitHub Pages, `/` in dev / on a custom domain).
+// Use it for local asset paths; full "https://…" URLs can be passed as-is.
+const asset = (path: string) => import.meta.env.BASE_URL + path;
+
 // "Our Games" grid. Set `image` to a cover-art URL to fill the card; leave it
 // empty ("") to show the flat color placeholder instead.
 export const games = [
-  { id: "g1", title: "Whiskers in the Sand", status: "In Development", color: "#ff5fa2", image: "/games/wits.jpg" },
+  { id: "g1", title: "Whiskers in the Sand", status: "In Development", color: "#ff5fa2", image: asset("games/wits.jpg") },
   { id: "g2", title: "Shape Smasher", status: "Prototype", color: "#5fe0ff", image: "" },
   { id: "g3", title: "Terranaut", status: "Concept", color: "#ffd45f", image: "" },
   // { id: "g4", title: "Game 04", status: "Concept", color: "#a07cff", image: "" },
