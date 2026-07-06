@@ -1,13 +1,15 @@
 import { roadmap } from "../content";
 import SectionHeading from "./ui/SectionHeading";
+import ComingSoon from "./ui/ComingSoon";
 
 export default function Roadmap() {
   return (
     <section id="roadmap" className="section-pad">
       <SectionHeading accent="Roadmap">The</SectionHeading>
       <p className="mx-auto mt-4 max-w-lg text-center font-retro text-xl text-muted">
-        Where we are, and where we're headed. [placeholder milestones]
+        Where we are, and where we're headed.
       </p>
+      <ComingSoon />
 
       {/* Parchment-style scroll panel, echoing the reference's roadmap block */}
       <div className="mt-12 border-2 border-gold bg-panel p-6 shadow-pixel-lg sm:p-10">

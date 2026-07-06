@@ -42,11 +42,16 @@ export default {
           "0%, 49%": { opacity: "1" },
           "50%, 100%": { opacity: "0" },
         },
+        fade: {
+          "0%": { opacity: "0", transform: "translateY(6px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         ticker: "ticker 30s linear infinite",
         float: "float 4s ease-in-out infinite",
         blink: "blink 1.1s steps(1) infinite",
+        fade: "fade 0.4s ease-out",
       },
     },
   },

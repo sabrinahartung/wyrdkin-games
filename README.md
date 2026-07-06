@@ -30,6 +30,6 @@ npm run dev      # http://localhost:5173
 
 ## Editing content
 
-All site copy and data (studio name, games, team, roadmap, devlog, socials)
+All site copy and data (studio name, games, team, coming soon, devlog, socials)
 live in [`src/content.ts`](src/content.ts) — edit there. Page sections are in
 `src/components/`; the logo lives in `Navbar.tsx` and `Hero.tsx`.

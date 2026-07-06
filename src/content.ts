@@ -35,19 +35,20 @@ export const tickerItems = [
 ];
 
 export const studioStats = [
-  { label: "Games in dev", value: "02" },
-  { label: "Team members", value: "04" },
-  { label: "Coffees / day", value: "∞" },
+  { label: "Games in dev", value: "03" },
+  { label: "Team members", value: "07" },
+  { label: "Caffeinated beveragess / day", value: "∞" },
 ];
 
-// "Our Games" grid — replace color/label with real cover art later.
+// "Our Games" grid. Set `image` to a cover-art URL to fill the card; leave it
+// empty ("") to show the flat color placeholder instead.
 export const games = [
-  { id: "g1", title: "Project Nova", status: "In Development", color: "#ff5fa2" },
-  { id: "g2", title: "Untitled RPG", status: "Prototype", color: "#5fe0ff" },
-  { id: "g3", title: "Game 03", status: "Concept", color: "#ffd45f" },
-  { id: "g4", title: "Game 04", status: "Concept", color: "#a07cff" },
-  { id: "g5", title: "Game 05", status: "Concept", color: "#7cff9e" },
-  { id: "g6", title: "Game 06", status: "Concept", color: "#ff9e5f" },
+  { id: "g1", title: "Whiskers in the Sand", status: "In Development", color: "#ff5fa2", image: "/games/wits.jpg" },
+  { id: "g2", title: "Shape Smasher", status: "Prototype", color: "#5fe0ff", image: "" },
+  { id: "g3", title: "Terranaut", status: "Concept", color: "#ffd45f", image: "" },
+  // { id: "g4", title: "Game 04", status: "Concept", color: "#a07cff", image: "" },
+  // { id: "g5", title: "Game 05", status: "Concept", color: "#7cff9e", image: "" },
+  // { id: "g6", title: "Game 06", status: "Concept", color: "#ff9e5f", image: "" },
 ];
 
 // Roadmap milestones
@@ -59,11 +60,15 @@ export const roadmap = [
 ];
 
 // Team — pixel avatars are color placeholders for now.
+// `blurb` is a short one-liner shown in the crew carousel — swap in real ones.
 export const team = [
-  { id: "t1", name: "Member 01", role: "Code", color: "#ff5fa2" },
-  { id: "t2", name: "Member 02", role: "Art", color: "#5fe0ff" },
-  { id: "t3", name: "Member 03", role: "Design", color: "#ffd45f" },
-  { id: "t4", name: "Member 04", role: "Audio", color: "#a07cff" },
+  { id: "t1", name: "Kilian", role: "Code", color: "#ff5fa2", blurb: "[ short blurb ]" },
+  { id: "t2", name: "Matt", role: "Art", color: "#5fe0ff", blurb: "[ short blurb ]" },
+  { id: "t3", name: "Mickey", role: "Social Media", color: "#7cffbb", blurb: "[ short blurb ]" },
+  { id: "t4", name: "Sabrina", role: "Art", color: "#5fe0ff", blurb: "[ short blurb ]" },
+  { id: "t5", name: "Satoshi", role: "Code", color: "#ff5fa2", blurb: "[ short blurb ]" },
+  { id: "t6", name: "Dana", role: "Audio", color: "#a07cff", blurb: "[ short blurb ]" },
+  { id: "t7", name: "Joao", role: "Code", color: "#ff5fa2", blurb: "[ short blurb ]" },
 ];
 
 // Devlog feed (replaces the "Latest Transactions" table)
@@ -80,3 +85,21 @@ export const socials = [
   { label: "Bluesky", href: "#" },
   { label: "YouTube", href: "#" },
 ];
+
+// Playful footer sign-off — one is picked at random on each page load.
+export const signoffs = [
+  "So long, and thanks for all the fish",
+  "The cake was not a lie",
+  "It's dangerous to go alone - take this",
+  "Stay awhile and listen",
+  "Would you kindly stick around?",
+  "You must construct additional pylons",
+  "Now you're playing with power",
+  "Insert coin to continue",
+  "Praise the sun \\[T]/",
+  "May your framerate be high",
+  "The stars are right",
+];
+
+// Footer credit line — swap in your own handle.
+export const credit = "Website created with ❤️ by Sabrina";

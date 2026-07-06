@@ -17,6 +17,7 @@ export default function Games() {
               <Placeholder
                 label={game.title}
                 color={game.color}
+                image={game.image}
                 aspect="aspect-[3/4]"
                 className="!border-0"
               />

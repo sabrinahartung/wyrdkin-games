@@ -1,5 +1,6 @@
 import { devlog } from "../content";
 import SectionHeading from "./ui/SectionHeading";
+import ComingSoon from "./ui/ComingSoon";
 
 const tagColor: Record<string, string> = {
   DEVLOG: "text-neon",
@@ -13,8 +14,9 @@ export default function Devlog() {
     <section id="devlog" className="section-pad">
       <SectionHeading accent="Updates">Latest</SectionHeading>
       <p className="mx-auto mt-4 max-w-lg text-center font-retro text-xl text-muted">
-        What we've been up to. [placeholder feed]
+        What we've been up to.
       </p>
+      <ComingSoon />
 
       <div className="mx-auto mt-12 max-w-3xl divide-y-2 divide-haze border-2 border-haze bg-nebula shadow-pixel">
         {devlog.map((entry) => (
