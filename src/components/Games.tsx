@@ -7,7 +7,7 @@ export default function Games() {
     <section id="games" className="section-pad">
       <SectionHeading accent="Our Games">Collect</SectionHeading>
       <p className="mx-auto mt-4 max-w-lg text-center font-retro text-xl text-muted">
-        Everything we're building. [placeholder — replace covers with real art]
+        Everything we're building.
       </p>
 
       <div className="mt-12 grid grid-cols-2 gap-5 sm:grid-cols-3">

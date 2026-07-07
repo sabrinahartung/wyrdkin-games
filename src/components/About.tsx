@@ -1,4 +1,4 @@
-import { studio, studioStats } from "../content";
+import { studio, studioStats, asset } from "../content";
 import SectionHeading from "./ui/SectionHeading";
 import Placeholder from "./ui/Placeholder";
 
@@ -27,8 +27,8 @@ export default function About() {
         </div>
 
         <Placeholder
-          label="Studio Photo / Mascot"
-          color="rgb(var(--accent))"
+          label={`${studio.name} ${studio.nameLine2} mascot`}
+          image={asset("lsg_cat.svg")}
           aspect="aspect-square"
           className="shadow-pixel-lg"
         />

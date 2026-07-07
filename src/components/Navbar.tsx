@@ -1,15 +1,16 @@
-import { nav, studio } from "../content";
+import { nav, studio, asset } from "../content";
 import PixelButton from "./ui/PixelButton";
 
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b-2 border-haze bg-void/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 sm:px-8">
-        {/* Logo placeholder — swap for real mark in one spot */}
         <a href="#top" className="flex items-center gap-3">
-          <span className="grid h-9 w-9 place-items-center border-2 border-grape bg-panel font-pixel text-[8px] text-neon">
-            LS
-          </span>
+          <img
+            src={asset("lsg_cat.svg")}
+            alt={`${studio.name} ${studio.nameLine2} logo`}
+            className="h-9 w-9"
+          />
           <span className="hidden font-pixel text-[11px] tracking-wider text-ink sm:block">
             {studio.name} {studio.nameLine2}
           </span>

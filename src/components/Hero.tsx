@@ -1,21 +1,10 @@
 import { studio } from "../content";
 import PixelButton from "./ui/PixelButton";
-import Placeholder from "./ui/Placeholder";
 
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="section-pad flex flex-col items-center text-center">
-        {/* Logo / key-art placeholder */}
-        <div className="mb-10 w-full max-w-md animate-float">
-          <Placeholder
-            label="Studio Key Art / Logo"
-            color="rgb(var(--accent))"
-            aspect="aspect-[16/9]"
-            className="shadow-pixel-lg"
-          />
-        </div>
-
         <p className="mb-4 font-pixel text-[10px] uppercase tracking-widest text-cyan">
           Indie Game Studio
         </p>

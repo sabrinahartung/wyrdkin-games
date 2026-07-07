@@ -9,7 +9,7 @@ export const studio = {
   tagline: "An indie game studio building worlds in our spare time.",
   // Placeholder until real copy exists.
   blurb:
-    "We're a small crew making the kind of games we wish existed. Pixel-perfect worlds, weird ideas, no publishers telling us no. [placeholder copy]",
+    "We're a small crew making the kind of games we wish existed. Pixel-perfect worlds, weird ideas, no publishers telling us no.",
 };
 
 export const nav = [
@@ -43,7 +43,7 @@ export const studioStats = [
 // Build a URL for a file in /public that stays correct under the deploy's base
 // path (`/lsg-website/` on GitHub Pages, `/` in dev / on a custom domain).
 // Use it for local asset paths; full "https://…" URLs can be passed as-is.
-const asset = (path: string) => import.meta.env.BASE_URL + path;
+export const asset = (path: string) => import.meta.env.BASE_URL + path;
 
 // "Our Games" grid. Set `image` to a cover-art URL to fill the card; leave it
 // empty ("") to show the flat color placeholder instead.
@@ -67,13 +67,13 @@ export const roadmap = [
 // Team — pixel avatars are color placeholders for now.
 // `blurb` is a short one-liner shown in the crew carousel — swap in real ones.
 export const team = [
-  { id: "t1", name: "Kilian", role: "Code", color: "#ff5fa2", blurb: "[ short blurb ]" },
-  { id: "t2", name: "Matt", role: "Art", color: "#5fe0ff", blurb: "[ short blurb ]" },
-  { id: "t3", name: "Mickey", role: "Social Media", color: "#7cffbb", blurb: "[ short blurb ]" },
-  { id: "t4", name: "Sabrina", role: "Art", color: "#5fe0ff", blurb: "[ short blurb ]" },
-  { id: "t5", name: "Satoshi", role: "Code", color: "#ff5fa2", blurb: "[ short blurb ]" },
-  { id: "t6", name: "Dana", role: "Audio", color: "#a07cff", blurb: "[ short blurb ]" },
-  { id: "t7", name: "Joao", role: "Code", color: "#ff5fa2", blurb: "[ short blurb ]" },
+  { id: "t1", name: "Kilian", role: "Code", color: "#ff5fa2", blurb: "" },
+  { id: "t2", name: "Matt", role: "Art", color: "#5fe0ff", blurb: "" },
+  { id: "t3", name: "Mickey", role: "Social Media", color: "#7cffbb", blurb: "" },
+  { id: "t4", name: "Sabrina", role: "Art", color: "#5fe0ff", blurb: "" },
+  { id: "t5", name: "Satoshi", role: "Code", color: "#ff5fa2", blurb: "" },
+  { id: "t6", name: "Dana", role: "Audio", color: "#a07cff", blurb: "" },
+  { id: "t7", name: "Joao", role: "Code", color: "#ff5fa2", blurb: "" },
 ];
 
 // Devlog feed (replaces the "Latest Transactions" table)

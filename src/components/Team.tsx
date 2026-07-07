@@ -48,9 +48,11 @@ export default function Team() {
             <div className="mt-2 font-pixel text-[8px] uppercase text-neon">
               {member.role}
             </div>
-            <p className="mx-auto mt-4 max-w-xs font-retro text-lg text-muted">
-              {member.blurb}
-            </p>
+            {member.blurb && (
+              <p className="mx-auto mt-4 max-w-xs font-retro text-lg text-muted">
+                {member.blurb}
+              </p>
+            )}
           </div>
 
           {/* Controls */}
