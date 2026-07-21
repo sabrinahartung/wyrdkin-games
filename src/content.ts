@@ -35,7 +35,7 @@ export const tickerItems = [
 ];
 
 export const studioStats = [
-  { label: "Games in dev", value: "03" },
+  { label: "Games in dev", value: "02" },
   { label: "Team members", value: "07" },
   { label: "Caffeinated beveragess / day", value: "∞" },
 ];
@@ -48,7 +48,6 @@ export const asset = (path: string) => import.meta.env.BASE_URL + path;
 // "Our Games" grid. Set `image` to a cover-art URL to fill the card; leave it
 // empty ("") to show the flat color placeholder instead.
 export const games = [
-  { id: "g1", title: "Whiskers in the Sand", status: "In Development", color: "#ff5fa2", image: asset("games/wits.jpg") },
   { id: "g2", title: "Shape Smasher", status: "Prototype", color: "#5fe0ff", image: "" },
   { id: "g3", title: "Terranaut", status: "Concept", color: "#ffd45f", image: "" },
   // { id: "g4", title: "Game 04", status: "Concept", color: "#a07cff", image: "" },
@@ -70,10 +69,7 @@ export const team = [
   { id: "t1", name: "Kilian", role: "Code", color: "#ff5fa2", blurb: "" },
   { id: "t2", name: "Matt", role: "Art", color: "#5fe0ff", blurb: "" },
   { id: "t3", name: "Mickey", role: "Social Media", color: "#7cffbb", blurb: "" },
-  { id: "t4", name: "Sabrina", role: "Art", color: "#5fe0ff", blurb: "" },
-  { id: "t5", name: "Satoshi", role: "Code", color: "#ff5fa2", blurb: "" },
-  { id: "t6", name: "Dana", role: "Audio", color: "#a07cff", blurb: "" },
-  { id: "t7", name: "Joao", role: "Code", color: "#ff5fa2", blurb: "" },
+  { id: "t4", name: "Sabrina", role: "Art", color: "#5fe0ff", blurb: "" }
 ];
 
 // Devlog feed (replaces the "Latest Transactions" table)
