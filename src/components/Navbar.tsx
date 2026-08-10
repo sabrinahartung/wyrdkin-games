@@ -11,9 +11,9 @@ export default function Navbar() {
             alt={`${studio.name} ${studio.nameLine2} logo`}
             className="h-9 w-9"
           />
-          <span className="hidden font-pixel text-[11px] tracking-wider text-ink sm:block">
+          {/* <span className="hidden font-pixel text-[11px] tracking-wider text-ink sm:block">
             {studio.name} {studio.nameLine2}
-          </span>
+          </span> */}
         </a>
 
         <nav className="hidden items-center gap-6 md:flex">
