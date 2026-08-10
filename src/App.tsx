@@ -37,7 +37,7 @@ export default function App() {
           <About />
         </div>
 
-        <PixelSlant from={SPACE} to={NEBULA} flip />
+        {/* <PixelSlant from={SPACE} to={NEBULA} flip />
         <div className="bg-panel">
           <Roadmap />
         </div>
@@ -45,7 +45,7 @@ export default function App() {
         <PixelSlant from={NEBULA} to={SPACE} />
         <div className="bg-space">
           <Team />
-        </div>
+        </div> */}
 
         <PixelSlant from={SPACE} to={NEBULA} flip />
         <div className="bg-panel">

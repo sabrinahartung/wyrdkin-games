@@ -23,11 +23,6 @@ export default function Team() {
 
   return (
     <section id="team" className="section-pad">
-      <SectionHeading accent="Crew">Meet the</SectionHeading>
-      <p className="mx-auto mt-4 max-w-lg text-center font-retro text-xl text-muted">
-        Seven people, too many ideas.
-      </p>
-
       <div
         className="mx-auto mt-12 max-w-md"
         onMouseEnter={() => setPaused(true)}

@@ -1,6 +1,7 @@
 import { studio, studioStats, asset } from "../content";
 import SectionHeading from "./ui/SectionHeading";
 import Placeholder from "./ui/Placeholder";
+import Team from "./Team";
 
 export default function About() {
   return (
@@ -25,14 +26,8 @@ export default function About() {
             ))}
           </div>
         </div>
-
-        <Placeholder
-          label={`${studio.name} ${studio.nameLine2} mascot`}
-          image={asset("wyrdkin_games_logo_light.png")}
-          aspect="aspect-square"
-          fit="contain"
-          className="shadow-pixel-lg"
-        />
+        <Team />
+        
       </div>
     </section>
   );
