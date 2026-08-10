@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { studio, socials, signoffs, credit } from "../content";
 import PixelButton from "./ui/PixelButton";
+import ContactForm from "./ContactForm";
 
 export default function Footer() {
   // Pick one sign-off at random per page load (stable for this render).
@@ -10,6 +11,12 @@ export default function Footer() {
 
   return (
     <footer id="community" className="relative mt-10 border-t-2 border-haze">
+      {/* Sits with the Discord CTA — both are "reach us"; the links and the
+            copyright below are the wind-down. */}
+        <div className="mt-16">
+          <ContactForm />
+        </div>
+        
       <div className="section-pad text-center">
         <h2 className="mx-auto max-w-3xl font-pixel text-2xl leading-relaxed text-grape sm:text-4xl">
           {signoff}
@@ -28,7 +35,9 @@ export default function Footer() {
           </PixelButton>
         </div>
 
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-6">
+        
+
+        <div className="mt-16 flex flex-wrap items-center justify-center gap-6">
           {socials.map((s) => (
             <a
               key={s.label}

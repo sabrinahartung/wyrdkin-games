@@ -47,6 +47,28 @@ Game art lives in `public/` (`art/`, `features/`, `items/`, `portraits/`,
 `screens/`). Reference it through the `asset()` helper so paths stay correct
 under the GitHub Pages base path.
 
+## Contact form
+
+The footer form posts straight to [Web3Forms](https://web3forms.com) — no
+backend, which is why it works on GitHub Pages. To switch it on:
+
+1. Request a free access key at web3forms.com using the address that should
+   receive the mail.
+2. Paste it into `contact.accessKey` in [`src/content.ts`](src/content.ts).
+
+Until a key is set the form refuses to send and shows a note in dev.
+
+**The access key is not a secret.** It's a public, write-only form ID: it can
+only submit *this* form, and can't read past messages or change settings. It
+belongs in the page source and is fine to commit — the worst case is spam, and
+rotating it is a one-line change. A hidden `botcheck` honeypot field filters the
+crawlers; add [Turnstile or hCaptcha](https://docs.web3forms.com) if real spam
+ever shows up. Never put a mail-provider API key or a Discord webhook here —
+those *are* credentials and would be abusable by anyone viewing source.
+
+Messages are emailed, never stored, so the site keeps no personal data — but
+Web3Forms processes it, so name them in the privacy policy.
+
 ## Theme
 
 Two source colors in [`src/theme.ts`](src/theme.ts) (`accent` + `base`, both

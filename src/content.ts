@@ -53,7 +53,7 @@ export const gamePageUrl = asset("whiskers-in-the-sand/");
  */
 export const flagship = {
   title: "Whiskers In The Sand",
-  logo: "art/logo.png",
+  logo: "art/whiskers_logo.png",
   // Status pill above the title.
   status: "Demo out now",
   hook: "A survivors-like roguelite where rescued cats shoot their way through an undead Egyptian desert.",
@@ -103,6 +103,43 @@ export const devlog = [
   // { id: "d3", tag: "DESIGN", title: "Combat loop notes", date: "2 weeks ago", author: "Member 03" },
   // { id: "d4", tag: "AUDIO", title: "Main theme demo", date: "3 weeks ago", author: "Member 04" },
 ];
+
+/**
+ * Footer contact form, posted to Web3Forms (https://web3forms.com).
+ *
+ * `accessKey` is NOT a secret — it's a public, write-only form ID, so it's
+ * meant to sit in the page source and is safe to commit. The worst anyone can
+ * do with it is send us spam; it can't read past messages or change settings,
+ * and rotating it means pasting a new key here. Never put a mail-provider API
+ * key or a Discord webhook in this file — those are real credentials.
+ *
+ * Setup: request a key at web3forms.com with the address that should receive
+ * the mail, then paste it below. Messages are emailed, never stored.
+ */
+export const contact = {
+  accessKey: "d405617f-1f47-4b38-a1b1-1785d7f682f7",
+  eyebrow: "",
+  heading: "Drop us a line",
+  blurb:
+    "Press, collabs, bug reports, or just to say hi — we read everything.",
+  // Subject line of the mail that lands in our inbox. The picked request type
+  // is appended to it, so inbox filters can route on it.
+  subject: "New message from the Wyrdkin Games site",
+  // "Request type" dropdown. Edit/reorder freely — the first entry is only a
+  // prompt, and whatever is picked is sent along as the `topic` field.
+  topicPrompt: "What's this about?",
+  topics: [
+    "General",
+    "Press & content creators",
+    "Business & collabs",
+    "Bug report",
+    "Join the crew",
+  ],
+  success: "Message sent. We'll get back to you soon.",
+  error: "That didn't send. Try again, or catch us on Discord.",
+  // Shown under the form — keep it in sync with the privacy policy.
+  note: "Your message is delivered by Web3Forms and only used to reply.",
+};
 
 export const socials = [
   { label: "Discord", href: "#" },
