@@ -66,9 +66,9 @@ export const roadmap = [
 export const team = [
   { id: "t1", name: "Kilian", role: "Dev", color: "#79d4cf", blurb: "" },
   { id: "t2", name: "Matt", role: "Art", color: "#9dc5c8", blurb: "" },
-  { id: "t3", name: "Sabrina", role: "Art & Dev", color: "#c7dcdd", blurb: "" },
+  { id: "t3", name: "Sabrina", role: "Art & Dev", color: "#79d4cf", blurb: "" },
   { id: "t4", name: "Satoshi", role: "Art & Dev", color: "#c7dcdd", blurb: "" },
-  { id: "t5", name: "Joao", role: "Dev", color: "#c7dcdd", blurb: "" },
+  { id: "t5", name: "Joao", role: "Dev", color: "#79d4cf", blurb: "" },
   { id: "t6", name: "Lucia", role: "Social Media", color: "#c7dcdd", blurb: "" },
 ];
 
