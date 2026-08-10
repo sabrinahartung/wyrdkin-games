@@ -4,6 +4,9 @@ interface Props {
   image?: string; // optional cover image URL — overrides the color/label fallback
   className?: string;
   aspect?: string; // tailwind aspect class, e.g. "aspect-square"
+  // "cover" fills the slot (right for cover art); "contain" fits the whole
+  // image in without cropping (right for logos / wordmarks).
+  fit?: "cover" | "contain";
 }
 
 /**
@@ -12,10 +15,13 @@ interface Props {
  */
 export default function Placeholder({
   label = "PLACEHOLDER",
-  color = "#3a2c6e",
+  // Follows the derived palette instead of a hardcoded shade, so art slots
+  // stay in tune when the theme sources change.
+  color = "rgb(var(--nebula))",
   image,
   className = "",
   aspect = "aspect-square",
+  fit = "cover",
 }: Props) {
   return (
     <div
@@ -27,7 +33,9 @@ export default function Placeholder({
           src={image}
           alt={label}
           loading="lazy"
-          className="absolute inset-0 h-full w-full object-cover"
+          className={`absolute inset-0 h-full w-full ${
+            fit === "contain" ? "object-contain p-6" : "pixel-art object-cover"
+          }`}
         />
       ) : (
         <>

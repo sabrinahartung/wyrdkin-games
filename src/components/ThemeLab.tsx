@@ -5,12 +5,12 @@ import { DEFAULT_SOURCES, deriveTheme, type ThemeSources } from "../theme";
  * Live theme editor — tweak the *source* colors in the running site to settle
  * on a palette together, then Export to get the values to paste into index.css.
  *
- * Only two knobs: the primary accent, and one purple base that the whole purple
- * range derives from (see src/theme.ts). Move the purple and every shade +
- * border shifts together, staying in harmony.
+ * Only two knobs: the primary accent, and one base color that the whole
+ * background range derives from (see src/theme.ts). Move the base and every
+ * shade + border shifts together, staying in harmony.
  *
  * Visible while developing: in dev, and on the GitHub Pages project site
- * (where the base path is `/lsg-website/`). It auto-hides on the real launch —
+ * (where the base path is `/wyrdkin-games/`). It auto-hides on the real launch —
  * i.e. once `base` is switched to `/` for a custom domain in vite.config.ts.
  */
 
@@ -20,7 +20,7 @@ interface Source {
 }
 
 const SOURCES: Source[] = [
-  { key: "purple", label: "Primary color" },
+  { key: "base", label: "Primary color" },
   { key: "accent", label: "Secondary color" },
   // Panel (the band the cards sit on) is intentionally linked to the page bg,
   // so it has no separate control. To split it out, give `--panel` its own
@@ -28,7 +28,7 @@ const SOURCES: Source[] = [
   // { key: "panel", label: "Panel · band" },
 ];
 
-const STORAGE_KEY = "lsg-theme-sources";
+const STORAGE_KEY = "wyrdkin-theme-sources";
 
 // Show in dev, and on any non-root deployment (the GitHub Pages project site).
 // When `base` becomes "/" for the real custom domain, this turns off.
@@ -57,7 +57,7 @@ export default function ThemeLab() {
     }
     const changed =
       sources.accent !== DEFAULT_SOURCES.accent ||
-      sources.purple !== DEFAULT_SOURCES.purple;
+      sources.base !== DEFAULT_SOURCES.base;
     if (changed) localStorage.setItem(STORAGE_KEY, JSON.stringify(sources));
     else localStorage.removeItem(STORAGE_KEY);
   }, [sources]);

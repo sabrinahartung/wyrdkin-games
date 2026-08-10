@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Cosmic purple backdrop, deep -> light (driven by CSS vars in index.css)
+        // Deep teal backdrop, dark -> light (driven by CSS vars in index.css)
         void: "rgb(var(--void) / <alpha-value>)",
         space: "rgb(var(--space) / <alpha-value>)",
         nebula: "rgb(var(--nebula) / <alpha-value>)",
@@ -12,12 +12,13 @@ export default {
         haze: "rgb(var(--haze) / <alpha-value>)",
         // Accents
         neon: "rgb(var(--accent) / <alpha-value>)", // driven by --accent in index.css
-        grape: "rgb(var(--grape) / <alpha-value>)", // lavender / links (derived)
-        cyan: "#5fe0ff", // teal pop
-        gold: "#ffd45f", // coin yellow
-        // Text
-        ink: "#e9e3ff",
-        muted: "#9d92c7",
+        grape: "rgb(var(--grape) / <alpha-value>)", // light teal / links (derived)
+        cyan: "#79d4cf", // bright teal pop — eyebrow labels
+        gold: "#ffd45f", // coin yellow — the one warm counter-accent
+        // Text — teal-tinted, not lavender. Hierarchy: ink > grape > muted.
+        // All ≥4.5:1 on both --void and --nebula.
+        ink: "#e6f2f1",
+        muted: "#8ea9a9",
       },
       fontFamily: {
         pixel: ['"Press Start 2P"', "monospace"],

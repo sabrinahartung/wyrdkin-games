@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 sm:px-8">
         <a href="#top" className="flex items-center gap-3">
           <img
-            src={asset("lsg_cat.svg")}
+            src={asset("wyrdkin_mark_light.png")}
             alt={`${studio.name} ${studio.nameLine2} logo`}
             className="h-9 w-9"
           />

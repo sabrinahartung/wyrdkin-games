@@ -28,8 +28,9 @@ export default function About() {
 
         <Placeholder
           label={`${studio.name} ${studio.nameLine2} mascot`}
-          image={asset("lsg_cat.svg")}
+          image={asset("wyrdkin_games_logo_light.png")}
           aspect="aspect-square"
+          fit="contain"
           className="shadow-pixel-lg"
         />
       </div>

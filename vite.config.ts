@@ -7,5 +7,5 @@ export default defineConfig(({ command }) => ({
   // Project pages live under /<repo>/, so the production build must use that
   // base for assets to resolve. Dev stays at "/".
   // ⚠️ When you move to a custom domain (served at the root), change this to "/".
-  base: command === "build" ? "/lsg-website/" : "/",
+  base: command === "build" ? "/wyrdkin-games/" : "/",
 }));

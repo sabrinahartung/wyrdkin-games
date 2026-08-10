@@ -3,10 +3,10 @@
  * CSS variables, so related colors stay in harmony.
  *
  *   accent  → the primary (independent).
- *   purple  → ONE secondary base. The whole purple range (page bg, bands,
- *             cards, borders, light-purple accent) is derived from its hue +
+ *   base    → ONE secondary base. The whole background range (page bg, bands,
+ *             cards, borders, light accent) is derived from its hue +
  *             saturation at fixed lightness steps, so the dark and light
- *             purples are always variations of each other and borders auto-fit.
+ *             shades are always variations of each other and borders auto-fit.
  *
  * Edit a source here (or live in the Theme Lab panel) and everything downstream
  * follows. The panel band is intentionally the same as the page bg (see below).
@@ -14,22 +14,22 @@
 
 export interface ThemeSources {
   accent: string; // hex, e.g. "#4fe8b0"
-  purple: string; // hex — base for the whole purple range
+  base: string; // hex — drives the whole background/border range
 }
 
 export const DEFAULT_SOURCES: ThemeSources = {
-  accent: "#4fe8b0",
-  purple: "#241b4b",
+  accent: "#567b79", // sage teal, straight from the logo
+  base: "#2a484a", // deep teal, straight from the logo
 };
 
-// Lightness (0–1) of each purple shade, darkest → lightest. Hue + saturation
-// come from the `purple` source; only lightness changes across the ramp.
+// Lightness (0–1) of each shade, darkest → lightest. Hue + saturation
+// come from the `base` source; only lightness changes across the ramp.
 const LIGHTNESS = {
   void: 0.075, // darkest — page background
   space: 0.12, // section band
   nebula: 0.185, // cards
   haze: 0.3, // borders
-  grape: 0.7, // light-purple accent (links, secondary borders)
+  grape: 0.7, // light accent (links, secondary borders)
 } as const;
 
 function hexToRgb(hex: string): [number, number, number] {
@@ -86,7 +86,7 @@ const triplet = ([r, g, b]: [number, number, number]) => `${r} ${g} ${b}`;
 
 /** Derive every CSS theme variable (as "r g b" triplets) from the sources. */
 export function deriveTheme(s: ThemeSources): Record<string, string> {
-  const [h, sat] = rgbToHsl(...hexToRgb(s.purple)); // base L is ignored
+  const [h, sat] = rgbToHsl(...hexToRgb(s.base)); // base L is ignored
   const shade = (l: number) => triplet(hslToRgb(h, sat, l));
   const pageBg = shade(LIGHTNESS.void);
   return {

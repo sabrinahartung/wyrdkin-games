@@ -4,8 +4,8 @@
  */
 
 export const studio = {
-  name: "LAST STOP",
-  nameLine2: "GAMES",
+  name: "Wyrdkin",
+  nameLine2: "Games",
   tagline: "An indie game studio building worlds in our spare time.",
   // Placeholder until real copy exists.
   blurb:
@@ -41,18 +41,18 @@ export const studioStats = [
 ];
 
 // Build a URL for a file in /public that stays correct under the deploy's base
-// path (`/lsg-website/` on GitHub Pages, `/` in dev / on a custom domain).
+// path (`/wyrdkin-games/` on GitHub Pages, `/` in dev / on a custom domain).
 // Use it for local asset paths; full "https://…" URLs can be passed as-is.
 export const asset = (path: string) => import.meta.env.BASE_URL + path;
 
 // "Our Games" grid. Set `image` to a cover-art URL to fill the card; leave it
 // empty ("") to show the flat color placeholder instead.
 export const games = [
-  { id: "g2", title: "Shape Smasher", status: "Prototype", color: "#5fe0ff", image: "" },
+  { id: "g2", title: "Shape Smasher", status: "Prototype", color: "#79d4cf", image: "" },
   { id: "g3", title: "Terranaut", status: "Concept", color: "#ffd45f", image: "" },
-  // { id: "g4", title: "Game 04", status: "Concept", color: "#a07cff", image: "" },
-  // { id: "g5", title: "Game 05", status: "Concept", color: "#7cff9e", image: "" },
-  // { id: "g6", title: "Game 06", status: "Concept", color: "#ff9e5f", image: "" },
+  // { id: "g4", title: "Game 04", status: "Concept", color: "#9dc5c8", image: "" },
+  // { id: "g5", title: "Game 05", status: "Concept", color: "#c7dcdd", image: "" },
+  // { id: "g6", title: "Game 06", status: "Concept", color: "#86adaf", image: "" },
 ];
 
 // Roadmap milestones
@@ -65,11 +65,13 @@ export const roadmap = [
 
 // Team — pixel avatars are color placeholders for now.
 // `blurb` is a short one-liner shown in the crew carousel — swap in real ones.
+// Tints stay inside the brand family (light teals + the one warm gold), and
+// each member gets a distinct one so the carousel reads as a change.
 export const team = [
-  { id: "t1", name: "Kilian", role: "Code", color: "#ff5fa2", blurb: "" },
-  { id: "t2", name: "Matt", role: "Art", color: "#5fe0ff", blurb: "" },
-  { id: "t3", name: "Mickey", role: "Social Media", color: "#7cffbb", blurb: "" },
-  { id: "t4", name: "Sabrina", role: "Art", color: "#5fe0ff", blurb: "" }
+  { id: "t1", name: "Kilian", role: "Code", color: "#79d4cf", blurb: "" },
+  { id: "t2", name: "Matt", role: "Art", color: "#9dc5c8", blurb: "" },
+  { id: "t3", name: "Mickey", role: "Social Media", color: "#ffd45f", blurb: "" },
+  { id: "t4", name: "Sabrina", role: "Art", color: "#c7dcdd", blurb: "" }
 ];
 
 // Devlog feed (replaces the "Latest Transactions" table)

@@ -1,4 +1,4 @@
-import { studio } from "../content";
+import { studio, asset } from "../content";
 import PixelButton from "./ui/PixelButton";
 
 export default function Hero() {
@@ -9,12 +9,13 @@ export default function Hero() {
           Indie Game Studio
         </p>
 
-        <h1 className="font-pixel text-4xl leading-tight text-ink sm:text-6xl">
-          {studio.name}
-          <br />
-          <span className="text-neon">{studio.nameLine2}</span>
-          <span className="animate-blink text-neon">_</span>
-        </h1>
+        {/* Wordmark, not a framed art slot: it needs an explicit width because
+            the source PNG is transparent and 2:1, so no card/crop around it. */}
+        <img
+          src={asset("wyrdkin_games_logo_light.png")}
+          alt={`${studio.name} ${studio.nameLine2} logo`}
+          className="w-full max-w-lg"
+        />
 
         <p className="mx-auto mt-6 max-w-xl font-retro text-2xl text-muted">
           {studio.tagline}
