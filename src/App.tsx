@@ -3,8 +3,6 @@ import Ticker from "./components/Ticker";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import FlagshipGame from "./components/FlagshipGame";
-import Roadmap from "./components/Roadmap";
-import Team from "./components/Team";
 import Devlog from "./components/Devlog";
 import Footer from "./components/Footer";
 import PixelSlant from "./components/ui/PixelSlant";

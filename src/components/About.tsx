@@ -1,6 +1,5 @@
-import { studio, studioStats, asset } from "../content";
+import { studio, studioStats } from "../content";
 import SectionHeading from "./ui/SectionHeading";
-import Placeholder from "./ui/Placeholder";
 import Team from "./Team";
 
 export default function About() {

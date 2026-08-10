@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { team } from "../content";
-import SectionHeading from "./ui/SectionHeading";
 import Placeholder from "./ui/Placeholder";
 
 const INTERVAL = 5000; // ms between auto-advances
