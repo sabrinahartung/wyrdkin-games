@@ -5,9 +5,6 @@ export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="section-pad flex flex-col items-center text-center">
-        <p className="mb-4 font-pixel text-[10px] uppercase tracking-widest text-cyan">
-          Indie Game Studio
-        </p>
 
         {/* Wordmark, not a framed art slot: it needs an explicit width because
             the source PNG is transparent and 2:1, so no card/crop around it. */}

@@ -16,7 +16,7 @@ export default function Footer() {
         </h2>
 
         <p className="mt-8 font-pixel text-sm text-ink">
-          Want in? Join the {studio.name} {studio.nameLine2} crew.
+          Join the {studio.name} {studio.nameLine2} community.
         </p>
         <p className="mx-auto mt-4 max-w-md font-retro text-xl text-muted">
           Follow along, playtest early builds, and hang out while we make games.
