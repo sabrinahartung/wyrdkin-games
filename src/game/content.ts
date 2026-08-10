@@ -22,7 +22,7 @@ export const game = {
   title: "WHISKERS",
   titleLine2: "IN THE SAND",
   // One-line hook shown in the hero.
-  hook: "A survivors-like roguelite where rescued cats shoot their way through an undead Egyptian desert.",
+  hook: "A survivors-like roguelite where cats shoot their way through an undead Egyptian desert.",
   // Longer pitch for the "What is it" section. Each entry renders as its own
   // paragraph — split or add entries to control the line breaks.
   pitch: [

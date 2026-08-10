@@ -11,12 +11,12 @@ export default function Footer() {
 
   return (
     <footer id="community" className="relative mt-10 border-t-2 border-haze">
-      {/* Sits with the Discord CTA — both are "reach us"; the links and the
-            copyright below are the wind-down. */}
-        <div className="mt-16">
-          <ContactForm />
-        </div>
-        
+      {/* Opens the footer, ahead of the sign-off. Needs its own horizontal
+          padding — it sits outside the `section-pad` wrapper below. */}
+      <div className="mt-16 px-5 sm:px-8">
+        <ContactForm />
+      </div>
+
       <div className="section-pad text-center">
         <h2 className="mx-auto max-w-3xl font-pixel text-2xl leading-relaxed text-grape sm:text-4xl">
           {signoff}

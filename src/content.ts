@@ -56,7 +56,7 @@ export const flagship = {
   logo: "art/whiskers_logo.png",
   // Status pill above the title.
   status: "Demo out now",
-  hook: "A survivors-like roguelite where rescued cats shoot their way through an undead Egyptian desert.",
+  hook: "A survivors-like roguelite where cats shoot their way through an undead Egyptian desert.",
   blurb:
     "Pick a cat. Grab a gun. Survive wave after wave of mummies, scarabs and desert horrors — then raid the shop between rounds to stack relics, combine weapons and forge builds that break the game in your favor.",
   tags: ["Survivors-like", "Roguelite", "Bullet Heaven", "Cats", "Pixel Art"],
