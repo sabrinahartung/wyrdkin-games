@@ -1,19 +1,19 @@
 import type { ReactNode } from "react";
 
-type Variant = "primary" | "secondary";
+type Variant = "primary" | "secondary" | "steam";
 
 interface Props {
   children: ReactNode;
   href?: string;
   variant?: Variant;
   className?: string;
-  /** Opens in a new tab — for links that leave the site (Steam, Discord…). */
   external?: boolean;
 }
 
 const styles: Record<Variant, string> = {
-  primary: "bg-neon text-void hover:brightness-110 border-void",
-  secondary: "bg-panel text-ink hover:bg-haze border-grape",
+  primary: "bg-gold text-tomb border-tomb hover:brightness-110",
+  secondary: "bg-sand text-papyrus border-gold hover:bg-dune",
+  steam: "bg-lapis text-tomb border-tomb hover:brightness-110",
 };
 
 export default function PixelButton({
@@ -27,7 +27,7 @@ export default function PixelButton({
     <a
       href={href}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-      className={`inline-block border-2 px-6 py-3 font-pixel text-[10px] uppercase tracking-wider shadow-pixel transition-all hover:-translate-y-0.5 active:translate-y-0 active:shadow-none ${styles[variant]} ${className}`}
+      className={`inline-block border-2 px-6 py-3 font-pixel text-[10px] uppercase leading-relaxed tracking-wider shadow-pixel transition-all hover:-translate-y-0.5 active:translate-y-0 active:shadow-none ${styles[variant]} ${className}`}
     >
       {children}
     </a>

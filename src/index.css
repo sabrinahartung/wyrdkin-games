@@ -19,6 +19,36 @@
     --panel: 14 24 24; /* = --void: card band reuses page bg (see theme.ts) */
     --haze: 55 95 98; /* borders */
     --grape: 157 197 200; /* light-teal accent (links, secondary borders) */
+
+    /* Not derived — the warm counter-accent and the secondary text tone.
+       Kept as vars so `.theme-desert` can swap them (see below). */
+    --gold: 255 212 95;
+    --muted: 142 169 169;
+  }
+
+  /* ── Whiskers In The Sand subpage ─────────────────────────────────
+     The game keeps its own ancient-Egypt look. Set on <body> in
+     whiskers-in-the-sand/index.html; everything under it re-points the two
+     shared tokens at the desert palette so the ported sections read gold
+     and sandstone instead of teal. */
+  .theme-desert {
+    --gold: 224 178 84; /* = theme(colors.gold) on the game page */
+    --muted: 203 162 112; /* warm secondary text */
+  }
+
+  body.theme-desert {
+    @apply bg-tomb text-papyrus;
+    /* Torchlight glow from the top, instead of the studio starfield */
+    background-image:
+      radial-gradient(1100px 620px at 50% -8%, rgb(168 88 85 / 0.22), transparent 62%),
+      radial-gradient(820px 480px at 88% 6%, rgb(224 178 84 / 0.12), transparent 60%),
+      radial-gradient(760px 520px at 8% 18%, rgb(87 127 196 / 0.08), transparent 60%);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+
+  .theme-desert ::selection {
+    background: rgb(224 178 84 / 0.35);
   }
 
   html {
@@ -57,5 +87,27 @@
 
   .section-pad {
     @apply mx-auto max-w-6xl px-5 py-20 sm:px-8;
+  }
+
+  /* ── Desert-theme overrides (Whiskers subpage) ──────────────────── */
+  /* Same component names, sandstone colors. Higher specificity, so these
+     win over the studio versions wherever `.theme-desert` is on <body>. */
+  .theme-desert .pixel-card {
+    @apply border-2 border-dune bg-sand shadow-pixel;
+  }
+
+  /* Body font is dense; bump the base size for readability */
+  .lead {
+    @apply font-retro text-xl leading-relaxed text-muted sm:text-2xl;
+  }
+
+  /* Thin hieroglyph-style dashed rule under section headings */
+  .hiero-rule {
+    height: 4px;
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgb(var(--gold)) 0 10px,
+      transparent 10px 18px
+    );
   }
 }

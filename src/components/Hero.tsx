@@ -19,8 +19,8 @@ export default function Hero() {
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <PixelButton href="#games" variant="primary">
-            View Our Games
+          <PixelButton href="#game" variant="primary">
+            Meet Our Game
           </PixelButton>
           <PixelButton href="#community" variant="secondary">
             Join the Discord

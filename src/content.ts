@@ -13,7 +13,7 @@ export const studio = {
 };
 
 export const nav = [
-  { label: "Games", href: "#games" },
+  { label: "The Game", href: "#game" },
   { label: "Studio", href: "#studio" },
   { label: "Roadmap", href: "#roadmap" },
   { label: "Team", href: "#team" },
@@ -22,11 +22,11 @@ export const nav = [
 
 // Scrolling marquee items (top of page)
 export const tickerItems = [
-  "WISHLIST ON STEAM SOON",
+  "WHISKERS IN THE SAND — DEMO OUT NOW ON STEAM",
   "★",
   "JOIN OUR DISCORD",
   "★",
-  "DEVLOG #01 IS LIVE",
+  "CATS. GUNS. MUMMIES.",
   "★",
 ];
 
@@ -41,15 +41,39 @@ export const studioStats = [
 // Use it for local asset paths; full "https://…" URLs can be passed as-is.
 export const asset = (path: string) => import.meta.env.BASE_URL + path;
 
-// "Our Games" grid. Set `image` to a cover-art URL to fill the card; leave it
-// empty ("") to show the flat color placeholder instead.
-export const games = [
-  { id: "g2", title: "Whiskers in the Sand", status: "Demo", color: "#79d4cf", image: "" },
-  // { id: "g3", title: "X", status: "Concept", color: "#ffd45f", image: "" },
-  // { id: "g4", title: "Game 04", status: "Concept", color: "#9dc5c8", image: "" },
-  // { id: "g5", title: "Game 05", status: "Concept", color: "#c7dcdd", image: "" },
-  // { id: "g6", title: "Game 06", status: "Concept", color: "#86adaf", image: "" },
-];
+// Page URLs. Both pages are real HTML entries (see vite.config.ts), so these
+// are plain links — no client-side router involved.
+export const homeUrl = import.meta.env.BASE_URL;
+export const gamePageUrl = asset("whiskers-in-the-sand/");
+
+/**
+ * The flagship game — the centerpiece of the homepage.
+ * Deep content (items, cats, screenshots, trailer) lives on its own subpage
+ * in `src/game/content.ts`; this is only what the showcase band needs.
+ */
+export const flagship = {
+  title: "Whiskers In The Sand",
+  logo: "art/logo.png",
+  // Status pill above the title.
+  status: "Demo out now",
+  hook: "A survivors-like roguelite where rescued cats shoot their way through an undead Egyptian desert.",
+  blurb:
+    "Pick a cat. Grab a gun. Survive wave after wave of mummies, scarabs and desert horrors — then raid the shop between rounds to stack relics, combine weapons and forge builds that break the game in your favor.",
+  tags: ["Survivors-like", "Roguelite", "Bullet Heaven", "Cats", "Pixel Art"],
+  releaseLine: "Full release coming 2026",
+  steamUrl:
+    "https://store.steampowered.com/app/4567940/Whiskers_In_The_Sand_Demo/",
+  pageUrl: gamePageUrl,
+  // Backdrop for the showcase band + the thumbnail strip below it.
+  backdrop: "screens/screen1.jpg",
+  shots: ["screens/screen2.jpg", "screens/screen3.jpg", "screens/screen4.jpg"],
+  // Three quick facts shown as pixel stat tiles.
+  facts: [
+    { value: "8", label: "Playable cats" },
+    { value: "200+", label: "Relics to find" },
+    { value: "9", label: "Languages" },
+  ],
+};
 
 // Roadmap milestones
 export const roadmap = [

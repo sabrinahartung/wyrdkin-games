@@ -4,19 +4,19 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whiskers In The Sand — Wyrdkin Games</title>
     <meta
       name="description"
-      content="Wyrdkin Games — an indie game studio building worlds in our spare time. Makers of Whiskers In The Sand, a survivors-like roguelite. Demo out now on Steam."
+      content="A survivors-like roguelite set in an undead Egyptian desert. Play gun-slinging cats, stack absurd item builds, and end the pharaoh's second reign. Demo out now."
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wyrdkin Games — Indie Game Studio</title>
 
     <!-- Social sharing. Scrapers need absolute URLs — update the host if the
          site moves to a custom domain. -->
-    <meta property="og:title" content="Wyrdkin Games" />
+    <meta property="og:title" content="Whiskers In The Sand — Wyrdkin Games" />
     <meta
       property="og:description"
-      content="Indie game studio. Makers of Whiskers In The Sand — cats, guns, mummies. Demo out now on Steam."
+      content="Survivors-like roguelite. Cats. Guns. Mummies. Wishlist on Steam."
     />
     <meta
       property="og:image"
@@ -24,7 +24,7 @@
     />
     <meta
       property="og:url"
-      content="https://sabrinahartung.github.io/wyrdkin-games/"
+      content="https://sabrinahartung.github.io/wyrdkin-games/whiskers-in-the-sand/"
     />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -33,7 +33,7 @@
       content="https://sabrinahartung.github.io/wyrdkin-games/art/header.jpg"
     />
 
-    <!-- Pixel display + retro body fonts. Self-host these before launch; CDN is fine for the prototype. -->
+    <!-- Pixel display + retro body fonts (same pair as the studio page) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -41,8 +41,10 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <!-- `theme-desert` swaps the studio's teal palette for the game's
+       ancient-Egypt one (see src/index.css). -->
+  <body class="theme-desert">
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/game/main.tsx"></script>
   </body>
 </html>

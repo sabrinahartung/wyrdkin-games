@@ -14,11 +14,25 @@ export default {
         neon: "rgb(var(--accent) / <alpha-value>)", // driven by --accent in index.css
         grape: "rgb(var(--grape) / <alpha-value>)", // light teal / links (derived)
         cyan: "#79d4cf", // bright teal pop — eyebrow labels
-        gold: "#ffd45f", // coin yellow — the one warm counter-accent
+        // `gold` and `muted` are var-driven so the Whiskers subpage can swap
+        // them to its desert values (see `.theme-desert` in index.css) without
+        // every ported component needing different class names.
+        gold: "rgb(var(--gold) / <alpha-value>)", // coin yellow — the one warm counter-accent
         // Text — teal-tinted, not lavender. Hierarchy: ink > grape > muted.
         // All ≥4.5:1 on both --void and --nebula.
         ink: "#e6f2f1",
-        muted: "#8ea9a9",
+        muted: "rgb(var(--muted) / <alpha-value>)",
+
+        // ── Whiskers In The Sand palette ──────────────────────────────
+        // Only used on the game subpage (`.theme-desert`); sampled from the
+        // game's pixel art so it keeps its own ancient-Egypt identity.
+        tomb: "#212123", // page background
+        night: "#2a484a", // section bands
+        sand: "#5e7a79", // cards / panels
+        dune: "#785426", // borders
+        ember: "#a85855", // warm red-ochre pop
+        lapis: "#577fc4", // cool blue secondary (Steam)
+        papyrus: "#e1cfb7", // main text
       },
       fontFamily: {
         pixel: ['"Press Start 2P"', "monospace"],
@@ -47,12 +61,18 @@ export default {
           "0%": { opacity: "0", transform: "translateY(6px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        flicker: {
+          "0%, 100%": { opacity: "0.85" },
+          "45%": { opacity: "1" },
+          "55%": { opacity: "0.7" },
+        },
       },
       animation: {
         ticker: "ticker 30s linear infinite",
         float: "float 4s ease-in-out infinite",
         blink: "blink 1.1s steps(1) infinite",
         fade: "fade 0.4s ease-out",
+        flicker: "flicker 5s ease-in-out infinite",
       },
     },
   },
