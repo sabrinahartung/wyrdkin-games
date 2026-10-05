@@ -210,5 +210,5 @@ export const socials = [
 ];
 
 export const credit = {
-  line: "Made with ❤️ in our spare time.",
+  line: "Made with ❤️",
 };

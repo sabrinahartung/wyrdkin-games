@@ -6,10 +6,10 @@
 export const studio = {
   name: "Wyrdkin",
   nameLine2: "Games",
-  tagline: "We're an indie game studio building worlds in our spare time.",
+  tagline: "A small indie team with big ideas, building games we believe in.",
   // Placeholder until real copy exists.
   blurb:
-    "We're a small crew making the kind of games we wish existed. Pixel-perfect worlds, weird ideas, no publishers telling us no.",
+    "We're a small crew making the kind of games we wish existed. Handcrafted worlds. Weird ideas. Built our way.",
 };
 
 export const nav = [

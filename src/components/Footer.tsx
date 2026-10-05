@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
 
         <p className="mt-10 font-retro text-lg text-muted/70">
-          © {studio.name} {studio.nameLine2} — built in our spare time.
+          © {studio.name} {studio.nameLine2} — building games we believe in.
         </p>
         <p className="mt-2 font-retro text-base text-muted/60">{credit}</p>
       </div>
