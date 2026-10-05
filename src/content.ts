@@ -3,6 +3,8 @@
  * Swap placeholders for real content here — components read from this file.
  */
 
+import { STEAM_URL } from "./game/content";
+
 export const studio = {
   name: "Wyrdkin",
   nameLine2: "Games",
@@ -61,8 +63,7 @@ export const flagship = {
     "Pick a cat. Grab a gun. Survive wave after wave of mummies, scarabs and desert horrors — then raid the shop between rounds to stack relics, combine weapons and forge builds that break the game in your favor.",
   tags: ["Survivors-like", "Roguelite", "Bullet Heaven", "Cats", "Pixel Art"],
   releaseLine: "Full release coming 2026",
-  steamUrl:
-    "https://store.steampowered.com/app/4567940/Whiskers_In_The_Sand_Demo/",
+  steamUrl: STEAM_URL,
   pageUrl: gamePageUrl,
   // Backdrop for the showcase band + the thumbnail strip below it.
   backdrop: "screens/screen1.jpg",
